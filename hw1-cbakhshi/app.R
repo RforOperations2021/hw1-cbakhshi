@@ -66,6 +66,30 @@ ui <- fluidPage(
                                     "International Student Score" = "International_Student_Score"), 
                         selected = "Size"),
             
+            # Set alpha level ---------------------------------------------
+            sliderInput(inputId = "alpha", 
+                        label = "Alpha:", 
+                        min = 0, max = 1, 
+                        value = 0.5),
+            
+            # Set point size level ---------------------------------------------
+            sliderInput(inputId = "size", 
+                        label = "Point Size:", 
+                        min = 0, max = 4, 
+                        value = 2),
+            
+            # Horizontal line for visual separation -----------------------
+            hr(),
+            
+            
+            # Show data table ---------------------------------------------
+            checkboxInput(inputId = "show_data",
+                          label = "Show data table",
+                          value = TRUE),
+            
+            # Horizontal line for visual separation -----------------------
+            hr(),
+            
             # Select which countries to plot ------------------------
             checkboxGroupInput(inputId = "selected_type",
                                label = "Select Country:",
@@ -85,7 +109,12 @@ ui <- fluidPage(
             br(),   br(),     # a little bit of visual separation
             
             # Output: Show scatterplot --------------------------------------
-            plotOutput(outputId = "scatterplot", height = 900, width = 650)
+            plotOutput(outputId = "scatterplot", height = 900, width = 650),
+            
+            br(),   br(),     # a little bit of visual separation
+            
+            # Show data table ---------------------------------------------
+            DT::dataTableOutput(outputId = "universitiestable")
         )
     )
 )
@@ -135,11 +164,20 @@ server <- function(input, output) {
     # Create scatterplot object the plotOutput function is expecting --
     output$scatterplot <- renderPlot({
         ggplot(data = university_subset(), aes_string(x = input$x , y = 'University')) +
-            geom_point( colour = "steelblue") +
+            geom_point(alpha = input$alpha, size = input$size, colour = "steelblue") +
             labs(title = "Top Universities", subtitle = "Data from QS World University Rankings 2020")+
             labs(x = toTitleCase(str_replace_all(input$x, "_", " ")),
                  y = "University Rankings")
     })
+    
+    # Print data table if checked -------------------------------------
+    output$universitiestable <- DT::renderDataTable(
+        if(input$show_data){
+            DT::datatable(data = university_subset(), 
+                          options = list(pageLength = 5), 
+                          rownames = FALSE)
+        }
+    )
 }
 
 # Run the application -----------------------------------------------
