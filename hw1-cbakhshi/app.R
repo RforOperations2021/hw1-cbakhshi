@@ -55,6 +55,9 @@ ui <- fluidPage(
                                     "International Student Score" = "International_Student_Score"), 
                         selected = "Academic Reputation Score"),
             
+            # Horizontal line for visual separation -----------------------
+            hr(),
+            
             # Select variable for x-axis of the third plot----------------------------------
             selectInput(inputId = "x", 
                         label = "X-axis for plot 3:",
@@ -66,13 +69,13 @@ ui <- fluidPage(
                                     "International Student Score" = "International_Student_Score"), 
                         selected = "Size"),
             
-            # Set alpha level ---------------------------------------------
+            # Set alpha level for plot 3---------------------------------------------
             sliderInput(inputId = "alpha", 
                         label = "Alpha:", 
                         min = 0, max = 1, 
                         value = 0.5),
             
-            # Set point size level ---------------------------------------------
+            # Set point size level for plot 3---------------------------------------------
             sliderInput(inputId = "size", 
                         label = "Point Size:", 
                         min = 0, max = 4, 
@@ -90,7 +93,7 @@ ui <- fluidPage(
             # Horizontal line for visual separation -----------------------
             hr(),
             
-            # Select which countries to plot ------------------------
+            # Select which countries to plot for plot 3------------------------
             checkboxGroupInput(inputId = "selected_type",
                                label = "Select Country:",
                                choices = unique(universities$Country),
@@ -112,6 +115,15 @@ ui <- fluidPage(
             plotOutput(outputId = "scatterplot", height = 900, width = 650),
             
             br(),   br(),     # a little bit of visual separation
+            
+            #Download button 
+            downloadButton(
+                outputId = "downloadbutton",
+                label = "Download",
+                class = NULL,
+                icon = shiny::icon("download")), 
+            
+            br(),      # a little bit of visual separation
             
             # Show data table ---------------------------------------------
             DT::dataTableOutput(outputId = "universitiestable")
@@ -176,6 +188,16 @@ server <- function(input, output) {
             DT::datatable(data = university_subset(), 
                           options = list(pageLength = 5), 
                           rownames = FALSE)
+        }
+    )
+    
+    #Download data if checked 
+    output$downloadbutton <- downloadHandler(
+        filename = function(){
+            paste('file1.csv')
+        },
+        content = function(file) {
+            write.csv(university_subset(), file)
         }
     )
 }
