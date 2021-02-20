@@ -37,7 +37,7 @@ ui <- fluidPage(
         # Inputs: Select variables to plot ------------------------------
         sidebarPanel(
             
-            # Set top level ---------------------------------------------
+            # Set top level for universities---------------------------------------------
             sliderInput(inputId = "topn", 
                         label = "Select the Number of Universities:", 
                         min = 10, max = 100, step = 5,
@@ -46,7 +46,7 @@ ui <- fluidPage(
             # Horizontal line for visual separation -----------------------
             hr(),
             
-            # Select variable for scores ----------------------------------
+            # Select variable for different score types ----------------------------------
             selectInput(inputId = "scores", 
                         label = "Select Score Type:",
                         choices = c("Academic Reputation Score" = "Academic_Reputation_Score",
@@ -123,7 +123,7 @@ ui <- fluidPage(
                 class = NULL,
                 icon = shiny::icon("download")), 
             
-            br(),      # a little bit of visual separation
+            br(),  br(),     # a little bit of visual separation
             
             # Show data table ---------------------------------------------
             DT::dataTableOutput(outputId = "universitiestable")
@@ -149,7 +149,7 @@ server <- function(input, output) {
                  y = "Number of Universities", x = 'Country')
     }
     )
-    # Create a subset of data filtering for top n universities ------
+    # Create a subset of data grouped by Country------
     avg_subset <- reactive({
         req(input$scores) # ensure availablity of value before proceeding
         universities %>%
@@ -166,7 +166,8 @@ server <- function(input, output) {
             theme(axis.text = element_text(angle = 45))
         
     })
-    # Create a subset of data filtering for selected countries ------
+    
+    # Create a subset of data filtering for selected countries for Plot 3------
     university_subset <- reactive({
         req(input$selected_type) # ensure availablity of value before proceeding
         filter(universities, Country %in% input$selected_type)
