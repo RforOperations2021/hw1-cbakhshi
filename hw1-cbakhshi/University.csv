@@ -1,0 +1,101 @@
+﻿Rank ,University,Country,Size_,Age_,Academic_Reputation_Score,Employer_Reputation_Score,Faculty_Citations_Score,International_Student_Score
+1,Massachusetts Institute of Technology (MIT),United States,">= 5,000 students",More than 100 years old,100,100,99.8,94.1
+2,Stanford University,United States,">= 12,000 students",More than 100 years old,100,100,98.6,67.7
+3,Harvard University,United States,">= 12,000 students",More than 100 years old,100,100,99.6,62.2
+4,University of Oxford,United Kingdom,">= 12,000 students",More than 100 years old,100,100,84.7,98.5
+5,California Institute of Technology (Caltech),United States,"Fewer than 5,000",More than 100 years old,97.8,81.2,100,87.3
+6,ETH Zurich (Swiss Federal Institute of Technology),Switzerland,">= 12,000 students",More than 100 years old,98.4,96.7,98.4,98
+7,University of Cambridge,United Kingdom,">= 12,000 students",More than 100 years old,100,100,74.2,97.6
+8,UCL (University College London),United Kingdom,"More than 30,000 students",More than 100 years old,99.3,98.7,76.7,100
+9,Imperial College London,United Kingdom,">= 12,000 students",More than 100 years old,98.6,99.9,72.1,100
+10,University of Chicago,United States,">= 12,000 students",More than 100 years old,99.5,93.7,78.5,81
+11,Nanyang Technological University (NTU),Singapore,">= 12,000 students",25 to 50 years old,92.1,93.8,88.8,74.2
+12,National University of Singapore (NUS),Singapore,"More than 30,000 students",More than 100 years old,99.8,99.2,75.7,76.4
+13,Princeton University,United States,">= 5,000 students",More than 100 years old,99.9,98.6,100,67.6
+14,Cornell University,United States,">= 12,000 students",More than 100 years old,98.7,90.4,95.1,72.3
+15,University of Pennsylvania,United States,">= 12,000 students",More than 100 years old,95.8,93.7,67.6,63.6
+16,Tsinghua University,China,"More than 30,000 students",More than 100 years old,97.4,99.1,80.4,30.1
+17,Yale University,United States,">= 12,000 students",More than 100 years old,99.9,99.9,53.5,57.4
+18,Columbia University,United States,">= 12,000 students",More than 100 years old,99.7,97.6,53,96.9
+19,Ecole Polytechnique Fédérale de Lausanne (EPFL),Switzerland,">= 5,000 students",More than 100 years old,75.6,77.6,98.9,100
+20,University of Edinburgh,United Kingdom,"More than 30,000 students",More than 100 years old,97.5,93.7,53,98.6
+21,University of Michigan,United States,"More than 30,000 students",More than 100 years old,98.9,94.4,61.6,44.1
+22,Peking University,China,"More than 30,000 students",More than 100 years old,99.1,99.6,73,36.9
+23,The University of Tokyo,Japan,">= 12,000 students",More than 100 years old,100,99.1,67.9,26.2
+24,Johns Hopkins University,United States,">= 12,000 students",More than 100 years old,88.3,52.6,77.6,81.5
+25,Duke University,United States,">= 12,000 students",More than 100 years old,89,84.2,80.3,59.3
+26,University of Hong Kong (HKU),Hong Kong,">= 12,000 students",More than 100 years old,97.3,82.6,44.5,99.1
+27,The University of Manchester,United Kingdom,"More than 30,000 students",More than 100 years old,94.9,97.7,51.5,98.6
+28,"University of California, Berkeley (UCB)",United States,"More than 30,000 students",More than 100 years old,100,99.9,97.7,39.7
+29,Australian National University (ANU),Australia,">= 12,000 students",50 to 100 years old,96.9,81.3,87.4,99.8
+30,University of Toronto,Canada,"More than 30,000 students",More than 100 years old,98.9,96.3,43.9,93
+31,Northwestern University,United States,">= 12,000 students",More than 100 years old,85.9,80.2,62.8,49
+32,The Hong Kong University of Science and Technology (HKUST),Hong Kong,">= 5,000 students",25 to 50 years old,85,71.3,89.5,87.5
+33,King's College London (KCL),United Kingdom,">= 12,000 students",More than 100 years old,88.5,80.4,52,99.8
+34,Kyoto University,Japan,">= 12,000 students",More than 100 years old,98.7,92.5,53.2,17.5
+35,McGill University,Canada,">= 12,000 students",More than 100 years old,92.2,93.8,58.4,96.2
+36,"University of California, Los Angeles (UCLA)",United States,"More than 30,000 students",More than 100 years old,100,99.7,88.3,38.2
+37,Seoul National University (SNU),South Korea,">= 12,000 students",50 to 100 years old,96.9,91.1,61.6,11.9
+38,The University of Melbourne,Australia,"More than 30,000 students",More than 100 years old,99.2,98.1,75,100
+39,New York University (NYU),United States,"More than 30,000 students",More than 100 years old,95.9,95.6,24,93.4
+40,Fudan University,China,"More than 30,000 students",More than 100 years old,83.4,93.8,57.8,42.9
+41,KAIST - Korea Advanced Institute of Science and Technology,South Korea,">= 5,000 students",25 to 50 years old,85,74.5,98.1,10.1
+42,The University of Sydney,Australia,"More than 30,000 students",More than 100 years old,97.5,96.4,70.9,100
+43,The University of New South Wales (UNSW),Australia,"More than 30,000 students",50 to 100 years old,91.2,95.7,84.5,98.5
+44,London School of Economics and Political Science (LSE),United Kingdom,">= 5,000 students",More than 100 years old,78.9,99.7,91.1,100
+45,"University of California, San Diego (UCSD)",United States,"More than 30,000 students",50 to 100 years old,92.2,51.8,78.4,70.3
+46,The Chinese University of Hong Kong (CUHK),Hong Kong,">= 12,000 students",50 to 100 years old,87.9,61.5,56.2,91.7
+47,The University of Queensland (UQ),Australia,"More than 30,000 students",More than 100 years old,88.5,82.2,81.8,99.5
+48,Carnegie Mellon University,United States,">= 12,000 students",More than 100 years old,75.2,77.5,94.3,99.9
+49,University of Bristol,United Kingdom,">= 12,000 students",More than 100 years old,76.6,84.2,61.8,75.6
+50,Delft University of Technology,Netherlands,">= 12,000 students",More than 100 years old,71.2,88.2,90,87.8
+51,University of British Columbia,Canada,"More than 30,000 students",More than 100 years old,97,89,42.2,79.3
+52,City University of Hong Kong,Hong Kong,">= 5,000 students",25 to 50 years old,59,41.3,89.4,95.3
+53,Université PSL (Paris Sciences & Lettres),France,">= 12,000 students",Less than 10 years old,77.7,98.6,26.2,72.1
+54,Zhejiang University,China,"More than 30,000 students",More than 100 years old,67.7,86.5,63.9,62.9
+55,Technische Universität München,Germany,"More than 30,000 students",More than 100 years old,80.2,99,26.9,76.8
+56,University of Wisconsin-Madison,United States,"More than 30,000 students",More than 100 years old,87.8,49.7,50,30.9
+57,Brown University,United States,">= 5,000 students",More than 100 years old,61.9,58.2,86.6,56
+58,Monash University,Australia,"More than 30,000 students",50 to 100 years old,88,91.9,64.2,99.9
+59,Tokyo Institute of Technology,Japan,">= 5,000 students",More than 100 years old,74.5,82.7,61.3,31.3
+60,Ecole Polytechnique,France,"Fewer than 5,000",More than 100 years old,43.8,99.3,66.3,97.9
+61,Shanghai Jiao Tong University,China,"More than 30,000 students",More than 100 years old,79.6,93.6,65.5,20.1
+62,The University of Warwick,United Kingdom,">= 12,000 students",50 to 100 years old,74.4,94.1,50.3,99.1
+63,Ludwig-Maximilians-Universität München,Germany,"More than 30,000 students",More than 100 years old,91.1,83.2,45.7,37.7
+64,University of Amsterdam,Netherlands,">= 12,000 students",More than 100 years old,81.1,56,75.9,52.5
+65,University of Texas at Austin,United States,"More than 30,000 students",More than 100 years old,94.2,83.3,93.4,18.6
+66,Ruprecht-Karls-Universität Heidelberg,Germany,">= 12,000 students",More than 100 years old,80,50.6,34.8,44.2
+67,University of Glasgow,United Kingdom,">= 12,000 students",More than 100 years old,72.2,58.9,55,96.5
+68,University of Washington,United States,"More than 30,000 students",More than 100 years old,86.1,51.4,99.2,40.5
+69,National Taiwan University (NTU),Taiwan,"More than 30,000 students",50 to 100 years old,89.8,82.4,59.7,30.4
+70,Universiti Malaya (UM),Malaysia,">= 12,000 students",More than 100 years old,68.2,72,41.5,57.2
+71,Osaka University,Japan,">= 12,000 students",50 to 100 years old,80.8,67.5,46.2,14.3
+72,Georgia Institute of Technology (Georgia Tech),United States,">= 12,000 students",More than 100 years old,71.1,81.7,100,65.8
+73,Universidad de Buenos Aires,Argentina,"More than 30,000 students",More than 100 years old,87.2,91.3,2.4,64.7
+74,University of Illinois at Urbana-Champaign,United States,"More than 30,000 students",More than 100 years old,89,58.1,86.3,67.2
+75,University of Zurich,Switzerland,">= 12,000 students",More than 100 years old,58.6,64.5,38.7,59.4
+76,Sorbonne University,France,"More than 30,000 students",Less than 10 years old,89.2,45.9,36.2,56.5
+77,Durham University,United Kingdom,">= 12,000 students",More than 100 years old,57.3,91.2,77.9,87.2
+78,The University of Sheffield,United Kingdom,">= 12,000 students",More than 100 years old,61.3,58.7,61.4,94.1
+79,Katholieke Universiteit Leuven,Belgium,"More than 30,000 students",More than 100 years old,79.1,64.3,85.3,37.5
+80,University of Birmingham,United Kingdom,">= 12,000 students",More than 100 years old,65.6,78.8,49.3,85.7
+81,University of Copenhagen,Denmark,"More than 30,000 students",More than 100 years old,70.1,43.9,25.5,29.4
+82,Tohoku University,Japan,">= 12,000 students",More than 100 years old,69.5,59.1,43.1,17.6
+83,Korea University,South Korea,">= 12,000 students",More than 100 years old,70,85,35.4,44.7
+84,The University of Auckland,New Zealand,">= 12,000 students",More than 100 years old,84.2,62.8,44.8,91.8
+85,Lomonosov Moscow State University,Russia,"More than 30,000 students",More than 100 years old,73.6,84.9,7.2,56.1
+86,Rice University,United States,">= 5,000 students",More than 100 years old,40.1,22.7,93.6,90.6
+87,The University of Western Australia (UWA),Australia,">= 12,000 students",More than 100 years old,62.4,59.8,88.3,98.7
+88,Pohang University of Science and Technology (POSTECH),South Korea,"Fewer than 5,000",25 to 50 years old,41.3,40.8,99.3,3.6
+89,University of Science and Technology of China,China,">= 12,000 students",50 to 100 years old,56.2,26.1,98.5,5.7
+90,"University of North Carolina, Chapel Hill",United States,"More than 30,000 students",More than 100 years old,68.7,53.3,46,11.3
+91,The Hong Kong Polytechnic University,Hong Kong,">= 12,000 students",25 to 50 years old,61.3,43.7,46.3,74.8
+92,Lund University,Sweden,">= 12,000 students",More than 100 years old,69.6,54.3,51.9,70.1
+93,Pennsylvania State University,United States,"More than 30,000 students",More than 100 years old,76.5,80.4,67.8,38.6
+94,University of Leeds,United Kingdom,"More than 30,000 students",More than 100 years old,69.2,81.2,41.6,81.8
+95,Sungkyunkwan University,South Korea,">= 12,000 students",More than 100 years old,58.4,74.6,49.3,38.1
+96,The University of Nottingham,United Kingdom,"More than 30,000 students",More than 100 years old,60.3,73.2,49.7,82.1
+97,University of Southampton,United Kingdom,">= 12,000 students",More than 100 years old,50.8,52.5,68.1,92.8
+98,Boston University,United States,">= 12,000 students",More than 100 years old,63.1,57.5,62.1,88.6
+99,"KTH, Royal Institute of Technology",Sweden,">= 12,000 students",More than 100 years old,47.5,68.4,72.8,48.7
+100,University of St Andrews,United Kingdom,">= 5,000 students",More than 100 years old,45.2,51.6,67.4,99.8
