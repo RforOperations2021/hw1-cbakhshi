@@ -53,7 +53,24 @@ ui <- fluidPage(
                                     "Employer Reputation Score" = "Employer_Reputation_Score",
                                     "Faculty Citations Score" = "Faculty_Citations_Score",
                                     "International Student Score" = "International_Student_Score"), 
-                        selected = "Academic Reputation Score")
+                        selected = "Academic Reputation Score"),
+            
+            # Select variable for x-axis of the third plot----------------------------------
+            selectInput(inputId = "x", 
+                        label = "X-axis for plot 3:",
+                        choices = c("Size" = "Size_", 
+                                    "Age"= "Age_",
+                                    "Academic Reputation Score" = "Academic_Reputation_Score",
+                                    "Employer Reputation Score" = "Employer_Reputation_Score",
+                                    "Faculty Citations Score" = "Faculty_Citations_Score",
+                                    "International Student Score" = "International_Student_Score"), 
+                        selected = "Size"),
+            
+            # Select which countries to plot ------------------------
+            checkboxGroupInput(inputId = "selected_type",
+                               label = "Select Country:",
+                               choices = unique(universities$Country),
+                               selected = "United States")
         ),
         
         mainPanel(
@@ -63,7 +80,12 @@ ui <- fluidPage(
             br(),   br(),     # a little bit of visual separation
             
             # Output: Show barplot 2 --------------------------------------
-            plotOutput(outputId = "barplot2", height = 400, width = 850)
+            plotOutput(outputId = "barplot2", height = 400, width = 850),
+            
+            br(),   br(),     # a little bit of visual separation
+            
+            # Output: Show scatterplot --------------------------------------
+            plotOutput(outputId = "scatterplot", height = 900, width = 650)
         )
     )
 )
@@ -102,6 +124,21 @@ server <- function(input, output) {
                  y = toTitleCase(str_replace_all(input$scores, "_", " "))) +
             theme(axis.text = element_text(angle = 45))
         
+    })
+    # Create a subset of data filtering for selected countries ------
+    university_subset <- reactive({
+        req(input$selected_type) # ensure availablity of value before proceeding
+        filter(universities, Country %in% input$selected_type)
+    })
+    
+    
+    # Create scatterplot object the plotOutput function is expecting --
+    output$scatterplot <- renderPlot({
+        ggplot(data = university_subset(), aes_string(x = input$x , y = 'University')) +
+            geom_point( colour = "steelblue") +
+            labs(title = "Top Universities", subtitle = "Data from QS World University Rankings 2020")+
+            labs(x = toTitleCase(str_replace_all(input$x, "_", " ")),
+                 y = "University Rankings")
     })
 }
 
