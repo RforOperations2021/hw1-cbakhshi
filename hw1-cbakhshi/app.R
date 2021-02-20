@@ -41,12 +41,29 @@ ui <- fluidPage(
             sliderInput(inputId = "topn", 
                         label = "Select the Number of Universities:", 
                         min = 10, max = 100, step = 5,
-                        value = 20)
+                        value = 20),
+            
+            # Horizontal line for visual separation -----------------------
+            hr(),
+            
+            # Select variable for scores ----------------------------------
+            selectInput(inputId = "scores", 
+                        label = "Select Score Type:",
+                        choices = c("Academic Reputation Score" = "Academic_Reputation_Score",
+                                    "Employer Reputation Score" = "Employer_Reputation_Score",
+                                    "Faculty Citations Score" = "Faculty_Citations_Score",
+                                    "International Student Score" = "International_Student_Score"), 
+                        selected = "Academic Reputation Score")
         ),
         
         mainPanel(
             # Output: Show barplot --------------------------------------
-            plotOutput(outputId = "barplot")
+            plotOutput(outputId = "barplot"),
+            
+            br(),   br(),     # a little bit of visual separation
+            
+            # Output: Show barplot 2 --------------------------------------
+            plotOutput(outputId = "barplot2", height = 400, width = 850)
         )
     )
 )
@@ -69,6 +86,23 @@ server <- function(input, output) {
                  y = "Number of Universities", x = 'Country')
     }
     )
+    # Create a subset of data filtering for top n universities ------
+    avg_subset <- reactive({
+        req(input$scores) # ensure availablity of value before proceeding
+        universities %>%
+            group_by(Country) 
+    })
+    
+    # Create barplot 2 object the plotOutput function is expecting --
+    output$barplot2 <- renderPlot({
+        ggplot(data = avg_subset(), aes_string(x = 'Country' , y = input$scores, fill = 'Country'))+
+            geom_bar(stat = "identity", position = 'dodge')+
+            labs(title = "Average Scores by Country", subtitle = "Choose the scores you want to at on the left.",
+                 x = 'Countries',
+                 y = toTitleCase(str_replace_all(input$scores, "_", " "))) +
+            theme(axis.text = element_text(angle = 45))
+        
+    })
 }
 
 # Run the application -----------------------------------------------
